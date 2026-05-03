@@ -4,9 +4,241 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Niko Massei | Portfolio</title>
+    <meta name="description" content="Cybersecurity student, NSU Cybersecurity Club President, and CTF leader. Current focus on cloud security and Azure environments.">
     <link rel="stylesheet" href="css/style.css">
 </head>
 <body>
-    <h1>Hello, Azure.</h1>
+
+    <!-- =====================
+         NAVIGATION
+    ===================== -->
+    <nav>
+        <div class="container">
+            <div class="nav-inner">
+                <span class="nav-logo">Massei<span class="cursor"></span></span>
+                <ul class="nav-links">
+                    <li><a href="#" class="nav-link active" data-section="about">about</a></li>
+                    <li><a href="#" class="nav-link" data-section="projects">projects</a></li>
+                    <li><a href="#" class="nav-link" data-section="ctf">ctf</a></li>
+                    <li><a href="#" class="nav-link" data-section="resume">resume</a></li>
+                    <li><a href="#" class="nav-link" data-section="contact">contact</a></li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <!-- =====================
+         MAIN CONTENT
+    ===================== -->
+    <main class="container">
+
+        <!-- ABOUT -->
+        <section id="about" class="active">
+            <div class="section-tag">// about me</div>
+            <h1>Hi, I'm <span style="color: var(--accent);">Niko Massei</span></h1>
+            <p style="max-width: 560px; font-size: 15px;">
+                Cybersecurity student specializing in Azure cloud security, Blue Team operations, and applied threat research. 
+                Currently architecting hybrid environments in pursuit of the AZ-104 and AZ-500 certifications.
+            </p>
+            <div style="margin-bottom: 28px;">
+                <span class="tag tag-cloud">AZ-104 in progress</span>
+                <span class="tag tag-cloud">AZ-500 in progress</span>
+                <span class="tag">Azure</span>
+                <span class="tag tag-python">Python</span>
+                <span class="tag">CTF Captain</span>
+            </div>
+            <div style="display: flex; gap: 12px; flex-wrap: wrap; margin-bottom: 48px;">
+                <a href="#" class="btn-primary nav-link" data-section="projects">View Projects</a>
+                <a href="assets/resume.pdf" class="btn-ghost" target="_blank">Download Resume</a>
+            </div>
+            <div class="status">
+                <div class="status-dot"></div>
+                open to opportunities
+            </div>
+        </section>
+
+        <!-- PROJECTS -->
+        <section id="projects">
+            <div class="section-tag">// projects & labs</div>
+            <h2>Things I've Built</h2>
+            <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 16px;">
+
+                <div class="card">
+                    <h3>Portfolio Website</h3>
+                    <p style="font-size: 13px; margin-bottom: 12px;">
+                        This site — built from scratch with vanilla HTML, CSS, and JavaScript. 
+                        Deployed via Azure Static Web Apps with a GitHub Actions CI/CD pipeline.
+                    </p>
+                    <span class="tag tag-cloud">Azure</span>
+                    <span class="tag">HTML/CSS/JS</span>
+                    <span class="tag">CI/CD</span>
+                </div>
+
+                <div class="card">
+                    <h3>Project Two</h3>
+                    <p style="font-size: 13px; margin-bottom: 12px;">
+                        Description of what it does, what problem it solves, and what you learned.
+                    </p>
+                    <span class="tag tag-python">Python</span>
+                    <span class="tag">Networking</span>
+                </div>
+
+                <div class="card">
+                    <h3>Project Three</h3>
+                    <p style="font-size: 13px; margin-bottom: 12px;">
+                        Description of what it does, what problem it solves, and what you learned.
+                    </p>
+                    <span class="tag tag-cloud">Azure</span>
+                    <span class="tag">Security</span>
+                </div>
+
+            </div>
+        </section>
+
+        <!-- CTF -->
+        <section id="ctf">
+            <div class="section-tag">// ctf writeups</div>
+            <h2>Capture The Flag</h2>
+            <p style="max-width: 520px; font-size: 14px; margin-bottom: 32px;">
+                Writeups from CTF competitions and practice platforms. 
+                Each one documents the approach, tools used, and what I learned.
+            </p>
+            <div style="display: flex; flex-direction: column; gap: 12px;">
+
+                <div class="card" style="display: flex; justify-content: space-between; align-items: center; flex-wrap: wrap; gap: 12px;">
+                    <div>
+                        <h3>CTF Challenge Name</h3>
+                        <p style="font-size: 12px; margin: 0;">Platform — Event Name</p>
+                    </div>
+                    <div style="display: flex; align-items: center; gap: 10px;">
+                        <span class="tag tag-web">web</span>
+                        <a href="#" class="btn-ghost" style="padding: 6px 14px; font-size: 12px;">Read</a>
+                    </div>
+                </div>
+
+                <div class="card" style="display: flex; justify-content: space-between; align-items: center; flex-wrap: wrap; gap: 12px;">
+                    <div>
+                        <h3>CTF Challenge Name</h3>
+                        <p style="font-size: 12px; margin: 0;">Platform — Event Name</p>
+                    </div>
+                    <div style="display: flex; align-items: center; gap: 10px;">
+                        <span class="tag tag-crypto">crypto</span>
+                        <a href="#" class="btn-ghost" style="padding: 6px 14px; font-size: 12px;">Read</a>
+                    </div>
+                </div>
+
+                <div class="card" style="display: flex; justify-content: space-between; align-items: center; flex-wrap: wrap; gap: 12px;">
+                    <div>
+                        <h3>CTF Challenge Name</h3>
+                        <p style="font-size: 12px; margin: 0;">Platform — Event Name</p>
+                    </div>
+                    <div style="display: flex; align-items: center; gap: 10px;">
+                        <span class="tag tag-forensics">forensics</span>
+                        <a href="#" class="btn-ghost" style="padding: 6px 14px; font-size: 12px;">Read</a>
+                    </div>
+                </div>
+
+            </div>
+        </section>
+
+        <!-- RESUME -->
+        <section id="resume">
+            <div class="section-tag">// resume</div>
+            <h2>Experience & Education</h2>
+
+            <div style="margin-bottom: 40px;">
+                <h3 style="color: var(--accent); font-family: var(--font-mono); font-size: 12px; letter-spacing: 0.1em; text-transform: uppercase; margin-bottom: 16px;">Education</h3>
+                <div class="card" style="margin-bottom: 12px;">
+                    <div style="display: flex; justify-content: space-between; flex-wrap: wrap; gap: 4px;">
+                        <h3>Bachelor of Science in Cybersecurity — Northeastern State University</h3>
+                        <span style="font-family: var(--font-mono); font-size: 12px; color: var(--text-dim);">May 2027</span>
+                    </div>
+                    <p style="font-size: 13px; margin: 0;">Cybersecurity</p>
+                </div>
+            </div>
+
+            <div style="margin-bottom: 40px;">
+                <h3 style="color: var(--accent); font-family: var(--font-mono); font-size: 12px; letter-spacing: 0.1em; text-transform: uppercase; margin-bottom: 16px;">Certifications</h3>
+                <div class="card" style="margin-bottom: 12px;">
+                    <div style="display: flex; justify-content: space-between; flex-wrap: wrap; gap: 4px;">
+                        <h3>Microsoft AZ-104</h3>
+                        <span class="tag tag-cloud">In Progress</span>
+                    </div>
+                    <p style="font-size: 13px; margin: 0;">Azure Administrator Associate</p>
+                </div>
+                <div class="card" style="margin-bottom: 12px;">
+                    <div style="display: flex; justify-content: space-between; flex-wrap: wrap; gap: 4px;">
+                        <h3>Microsoft AZ-500</h3>
+                        <span class="tag tag-cloud">In Progress</span>
+                    </div>
+                    <p style="font-size: 13px; margin: 0;">Azure Security Engineer Associate</p>
+                </div>
+            </div>
+
+            <div style="margin-bottom: 40px;">
+                <h3 style="color: var(--accent); font-family: var(--font-mono); font-size: 12px; letter-spacing: 0.1em; text-transform: uppercase; margin-bottom: 16px;">Experience</h3>
+                <div class="card">
+                    <div style="display: flex; justify-content: space-between; flex-wrap: wrap; gap: 4px;">
+                        <h3>AI Security Intern  — Dr. Lisa AI</h3>
+                        <span style="font-family: var(--font-mono); font-size: 12px; color: var(--text-dim);">Aug 2025 — Nov 2025</span>
+                    </div>
+                    <p style="font-size: 13px; margin: 0;">Collaborated directly with the CTO to research and document security risks within LLM integrations and industry-relevant architectures.
+.</p>
+                </div>
+            </div>
+
+            <a href="assets/resume.pdf" class="btn-primary" target="_blank">Download Full Resume</a>
+        </section>
+
+        <!-- CONTACT -->
+        <section id="contact">
+            <div class="section-tag">// contact</div>
+            <h2>Get In Touch</h2>
+            <p style="max-width: 480px; font-size: 14px; margin-bottom: 32px;">
+                Whether it's an opportunity, a collaboration, or just to talk security — 
+                my inbox is open.
+            </p>
+
+            <div class="card" style="max-width: 520px;">
+                <form id="contact-form" style="display: flex; flex-direction: column; gap: 16px;">
+
+                    <div>
+                        <label style="font-family: var(--font-mono); font-size: 12px; color: var(--text-muted); display: block; margin-bottom: 6px;">name</label>
+                        <input type="text" name="name" required
+                            style="width: 100%; background: var(--bg-primary); border: 1px solid var(--border); border-radius: var(--radius); padding: 10px 14px; color: var(--text-primary); font-family: var(--font-sans); font-size: 14px; outline: none; transition: border-color 0.2s;">
+                    </div>
+
+                    <div>
+                        <label style="font-family: var(--font-mono); font-size: 12px; color: var(--text-muted); display: block; margin-bottom: 6px;">email</label>
+                        <input type="email" name="email" required
+                            style="width: 100%; background: var(--bg-primary); border: 1px solid var(--border); border-radius: var(--radius); padding: 10px 14px; color: var(--text-primary); font-family: var(--font-sans); font-size: 14px; outline: none; transition: border-color 0.2s;">
+                    </div>
+
+                    <div>
+                        <label style="font-family: var(--font-mono); font-size: 12px; color: var(--text-muted); display: block; margin-bottom: 6px;">message</label>
+                        <textarea name="message" rows="5" required
+                            style="width: 100%; background: var(--bg-primary); border: 1px solid var(--border); border-radius: var(--radius); padding: 10px 14px; color: var(--text-primary); font-family: var(--font-sans); font-size: 14px; outline: none; resize: vertical; transition: border-color 0.2s;"></textarea>
+                    </div>
+
+                    <button type="submit" class="btn-primary" style="align-self: flex-start;">Send Message</button>
+                    <p id="form-status" style="font-family: var(--font-mono); font-size: 12px; display: none;"></p>
+
+                </form>
+            </div>
+        </section>
+
+    </main>
+
+    <!-- =====================
+         FOOTER
+    ===================== -->
+    <footer style="border-top: 1px solid var(--border); margin-top: 80px; padding: 24px 0;">
+        <div class="container" style="display: flex; justify-content: space-between; align-items: center; flex-wrap: wrap; gap: 12px;">
+            <span style="font-family: var(--font-mono); font-size: 12px; color: var(--text-dim);">nikomassei.me</span>
+            <span style="font-family: var(--font-mono); font-size: 12px; color: var(--text-dim);">built with HTML, CSS, JS — deployed on Azure</span>
+        </div>
+    </footer>
+
+    <script src="js/main.js"></script>
 </body>
 </html>

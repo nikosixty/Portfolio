@@ -1,0 +1,289 @@
+/* =====================
+   1. IMPORTS & VARIABLES
+   ===================== */
+@import url('https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;500&family=Inter:wght@400;500&display=swap');
+
+:root {
+    --accent:        #58a6ff;
+    --bg-primary:    #0d1117;
+    --bg-secondary:  #161b22;
+    --bg-card:       #161b22;
+    --border:        #21262d;
+    --text-primary:  #e6edf3;
+    --text-muted:    #8b949e;
+    --text-dim:      #484f58;
+    --green:         #3fb950;
+    --font-mono:     'JetBrains Mono', monospace;
+    --font-sans:     'Inter', sans-serif;
+    --radius:        6px;
+    --radius-lg:     12px;
+    --transition:    0.2s ease;
+}
+
+/* =====================
+   2. RESET & BASE
+   ===================== */
+*, *::before, *::after {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    background-color: var(--bg-primary);
+    color: var(--text-primary);
+    font-family: var(--font-sans);
+    font-size: 16px;
+    line-height: 1.7;
+    min-height: 100vh;
+}
+
+a {
+    color: var(--accent);
+    text-decoration: none;
+    transition: opacity var(--transition);
+}
+
+a:hover {
+    opacity: 0.8;
+}
+
+/* =====================
+   3. LAYOUT
+   ===================== */
+.container {
+    max-width: 860px;
+    margin: 0 auto;
+    padding: 0 24px;
+}
+
+section {
+    display: none;
+    padding: 64px 0;
+    animation: fadeIn 0.3s ease;
+}
+
+section.active {
+    display: block;
+}
+
+@keyframes fadeIn {
+    from { opacity: 0; transform: translateY(8px); }
+    to   { opacity: 1; transform: translateY(0); }
+}
+
+/* =====================
+   4. NAVIGATION
+   ===================== */
+nav {
+    position: sticky;
+    top: 0;
+    z-index: 100;
+    background: var(--bg-primary);
+    border-bottom: 1px solid var(--border);
+    padding: 16px 0;
+}
+
+.nav-inner {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.nav-logo {
+    font-family: var(--font-mono);
+    font-size: 14px;
+    color: var(--accent);
+    letter-spacing: 0.05em;
+}
+
+.nav-links {
+    display: flex;
+    gap: 28px;
+    list-style: none;
+}
+
+.nav-links a {
+    font-family: var(--font-mono);
+    font-size: 13px;
+    color: var(--text-muted);
+    transition: color var(--transition);
+}
+
+.nav-links a:hover,
+.nav-links a.active {
+    color: var(--accent);
+}
+
+/* =====================
+   5. TYPOGRAPHY HELPERS
+   ===================== */
+.section-tag {
+    font-family: var(--font-mono);
+    font-size: 11px;
+    color: var(--accent);
+    letter-spacing: 0.12em;
+    text-transform: uppercase;
+    margin-bottom: 12px;
+}
+
+h1 {
+    font-family: var(--font-sans);
+    font-size: 36px;
+    font-weight: 500;
+    color: var(--text-primary);
+    line-height: 1.2;
+    margin-bottom: 16px;
+}
+
+h2 {
+    font-family: var(--font-sans);
+    font-size: 22px;
+    font-weight: 500;
+    color: var(--text-primary);
+    margin-bottom: 20px;
+}
+
+h3 {
+    font-size: 15px;
+    font-weight: 500;
+    color: var(--text-primary);
+    margin-bottom: 4px;
+}
+
+p {
+    color: var(--text-muted);
+    margin-bottom: 16px;
+}
+
+/* =====================
+   6. BUTTONS
+   ===================== */
+.btn-primary {
+    display: inline-block;
+    padding: 10px 22px;
+    background: var(--accent);
+    color: #0d1117;
+    border-radius: var(--radius);
+    font-family: var(--font-mono);
+    font-size: 13px;
+    font-weight: 500;
+    border: none;
+    cursor: pointer;
+    transition: opacity var(--transition);
+}
+
+.btn-primary:hover {
+    opacity: 0.85;
+    color: #0d1117;
+}
+
+.btn-ghost {
+    display: inline-block;
+    padding: 10px 22px;
+    background: transparent;
+    color: var(--text-muted);
+    border-radius: var(--radius);
+    font-family: var(--font-mono);
+    font-size: 13px;
+    border: 1px solid var(--border);
+    cursor: pointer;
+    transition: border-color var(--transition), color var(--transition);
+}
+
+.btn-ghost:hover {
+    border-color: var(--accent);
+    color: var(--accent);
+}
+
+/* =====================
+   7. CARDS
+   ===================== */
+.card {
+    background: var(--bg-card);
+    border: 1px solid var(--border);
+    border-radius: var(--radius-lg);
+    padding: 24px;
+    transition: border-color var(--transition);
+}
+
+.card:hover {
+    border-color: var(--accent);
+}
+
+/* =====================
+   8. TAGS / BADGES
+   ===================== */
+.tag {
+    display: inline-block;
+    font-family: var(--font-mono);
+    font-size: 11px;
+    padding: 3px 10px;
+    border-radius: 4px;
+    border: 1px solid var(--border);
+    color: var(--text-muted);
+    background: var(--bg-primary);
+    margin: 4px 4px 0 0;
+}
+
+.tag-web      { border-color: #238636; color: #3fb950; background: #0d1f0d; }
+.tag-crypto   { border-color: #6e40c9; color: #a5a0f8; background: #1a1030; }
+.tag-forensics{ border-color: #da3633; color: #f78166; background: #2d0f0f; }
+.tag-cloud    { border-color: #1f6feb; color: #58a6ff; background: #0d1f38; }
+.tag-python   { border-color: #e3b341; color: #e3b341; background: #2d1f00; }
+
+/* =====================
+   9. STATUS INDICATOR
+   ===================== */
+.status {
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    font-family: var(--font-mono);
+    font-size: 12px;
+    color: var(--green);
+}
+
+.status-dot {
+    width: 7px;
+    height: 7px;
+    border-radius: 50%;
+    background: var(--green);
+    animation: pulse 2s infinite;
+}
+
+@keyframes pulse {
+    0%, 100% { opacity: 1; }
+    50%       { opacity: 0.4; }
+}
+
+/* =====================
+   10. CURSOR BLINK
+   ===================== */
+.cursor {
+    display: inline-block;
+    width: 2px;
+    height: 1em;
+    background: var(--accent);
+    margin-left: 2px;
+    vertical-align: middle;
+    animation: blink 1s infinite;
+}
+
+@keyframes blink {
+    0%, 100% { opacity: 1; }
+    50%       { opacity: 0; }
+}
+
+/* =====================
+   11. RESPONSIVE
+   ===================== */
+@media (max-width: 600px) {
+    h1 { font-size: 26px; }
+    .nav-links { gap: 16px; }
+    .nav-links a { font-size: 12px; }
+}
