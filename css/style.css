@@ -99,6 +99,8 @@ nav {
     font-size: 14px;
     color: var(--accent);
     letter-spacing: 0.05em;
+    text-decoration: none;
+    cursor: pointer;
 }
 
 .nav-links {
