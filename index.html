@@ -9,6 +9,9 @@
 </head>
 <body>
 
+    <!-- Background grid layer -->
+    <div class="grid-bg"></div>
+
     <!-- =====================
          NAVIGATION
     ===================== -->
@@ -35,14 +38,16 @@
         <section id="about" class="active">
             <div class="section-tag">// about me</div>
             <h1><span style="color: var(--accent);">Niko Massei</span></h1>
-            <p style="max-width: 560px; font-size: 15px;">
-                <strong>This Site is a Work in Progress</strong> - Cybersecurity student specializing in Blue Team operations and applied threat research. 
+            <p class="hero-bio">
+                Cybersecurity student specializing in Blue Team operations and applied threat research.
                 Currently architecting hybrid environments in pursuit of the AZ-104 and AZ-500 certifications.
             </p>
-            <div style="margin-bottom: 28px;">
+            <div style="margin-bottom: 32px;">
                 <span class="tag tag-cloud">Azure</span>
                 <span class="tag tag-python">Python</span>
-                <span class="tag">CTF Captain</span>
+                <span class="tag tag-blueteam">Blue Team</span>
+                <span class="tag tag-soc">SOC</span>
+                <span class="tag tag-pentest">CTF Captain</span>
             </div>
             <div style="display: flex; gap: 12px; flex-wrap: wrap; margin-bottom: 48px;">
                 <a href="#" class="btn-primary nav-link" data-section="projects">View Projects</a>
@@ -58,43 +63,42 @@
         <section id="projects">
             <div class="section-tag">// projects & labs</div>
             <h2>Things I've Built</h2>
-            <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 16px;">
+            <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 16px;">
 
                 <div class="card">
                     <h3>Portfolio Website</h3>
                     <p style="font-size: 13px; margin-bottom: 12px;">
-                        Designed and built using HTML, CSS, and JavaScript. 
+                        Designed and built using HTML, CSS, and JavaScript.
                         Deployed via Azure Static Web Apps with a fully automated GitHub Actions CI/CD pipeline.
                     </p>
                     <span class="tag tag-cloud">Azure</span>
-                    <span class="tag">CI/CD</span>
+                    <span class="tag tag-network">CI/CD</span>
                     <span class="tag">GitHub</span>
                     <span class="tag">HTML</span>
                     <span class="tag">CSS</span>
                     <span class="tag">JavaScript</span>
-                    
                 </div>
 
                 <div class="card">
-                    <h3>Network Defense & Traffic Analysis Lab</h3>
+                    <h3>Network Defense & Traffic Analysis</h3>
                     <p style="font-size: 13px; margin-bottom: 12px;">
                         Engineered an isolated multi-OS virtual environment to simulate and analyze internal network traffic.
                         Conducted PCAP investigations on HTTP/DNS protocols using Wireshark and implemented host-based firewall and router hardening controls.
                     </p>
-                    <span class="tag tag-python">Wireshark</span>
-                    <span class="tag">Network Security</span>
+                    <span class="tag tag-network">Wireshark</span>
+                    <span class="tag tag-blueteam">Network Security</span>
                     <span class="tag">Firewalls</span>
                 </div>
 
                 <div class="card">
                     <h3>Vulnerability Scanning & Mitigation</h3>
                     <p style="font-size: 13px; margin-bottom: 12px;">
-                        Performed  Application Security Testing, utilizing OWASP ZAP against intentionally vulnerable web applications. 
+                        Performed Application Security Testing, utilizing OWASP ZAP against intentionally vulnerable web applications.
                         Verified high-risk injection flaws and cross-site scripting (XSS) vulnerabilities to understand remediation cycles in a development environment.
                     </p>
-                    <span class="tag">OWASP ZAP</span>
-                    <span class="tag">Vulnerability Assessment</span>
-                    <span class="tag">Web Security</span>
+                    <span class="tag tag-pentest">OWASP ZAP</span>
+                    <span class="tag tag-redteam">Vulnerability Assessment</span>
+                    <span class="tag tag-web">Web Security</span>
                 </div>
 
             </div>
@@ -115,7 +119,7 @@
                         <p style="font-size: 12px; margin: 0;">April 2026</p>
                     </div>
                     <div style="display: flex; align-items: center; gap: 10px;">
-                        <span class="tag tag-web">NCL</span>
+                        <span class="tag tag-ncl">NCL</span>
                         <a href="#" class="btn-ghost" style="padding: 6px 14px; font-size: 12px;">Read</a>
                     </div>
                 </div>
@@ -126,7 +130,7 @@
                         <p style="font-size: 12px; margin: 0;">February 2026</p>
                     </div>
                     <div style="display: flex; align-items: center; gap: 10px;">
-                        <span class="tag tag-crypto">Maltego</span>
+                        <span class="tag tag-osint">Maltego</span>
                         <a href="#" class="btn-ghost" style="padding: 6px 14px; font-size: 12px;">Read</a>
                     </div>
                 </div>
@@ -135,123 +139,123 @@
         </section>
 
         <!-- RESUME -->
-<!-- RESUME -->
-<section id="resume">
-    <div class="section-tag">// resume</div>
-    <h2>Experience & Education</h2>
+        <section id="resume">
+            <div class="section-tag">// resume</div>
+            <h2>Experience & Education</h2>
 
-    <div style="margin-bottom: 40px;">
-        <h3 style="color: var(--accent); font-family: var(--font-mono); font-size: 12px; letter-spacing: 0.1em; text-transform: uppercase; margin-bottom: 16px;">Education</h3>
+            <div style="margin-bottom: 40px;">
+                <h3 style="color: var(--accent); font-family: var(--font-mono); font-size: 12px; letter-spacing: 0.1em; text-transform: uppercase; margin-bottom: 16px;">Education</h3>
 
-        <div class="card" style="margin-bottom: 12px;">
-            <div style="display: flex; justify-content: space-between; flex-wrap: wrap; gap: 4px;">
-                <h3>B.S. Cybersecurity — Northeastern State University</h3>
-                <span style="font-family: var(--font-mono); font-size: 12px; color: var(--text-dim);">Expected May 2027</span>
-            </div>
-            <p style="font-size: 13px; margin-bottom: 8px;">Broken Arrow, OK &nbsp;·&nbsp; GPA: 4.0</p>
-            <p style="font-size: 13px; margin: 0;">President of the Cybersecurity Club · Active member of the Google-Funded Cybersecurity Clinic.</p>
-        </div>
-
-        <div class="card">
-            <div style="display: flex; justify-content: space-between; flex-wrap: wrap; gap: 4px;">
-                <h3>A.S. Enterprise Development — Tulsa Community College</h3>
-                <span style="font-family: var(--font-mono); font-size: 12px; color: var(--text-dim);">May 2024</span>
-            </div>
-            <p style="font-size: 13px; margin-bottom: 8px;">Tulsa, OK &nbsp; &nbsp;</p>
-            <p style="font-size: 13px; margin: 0;">Academic Honors · Studied Computer Information Systems.</p>
-        </div>
-    </div>
-
-    <div style="margin-bottom: 40px;">
-        <h3 style="color: var(--accent); font-family: var(--font-mono); font-size: 12px; letter-spacing: 0.1em; text-transform: uppercase; margin-bottom: 16px;">Experience</h3>
-
-        <div class="card" style="margin-bottom: 12px;">
-            <div style="display: flex; justify-content: space-between; flex-wrap: wrap; gap: 4px;">
-                <h3>AI Security Intern — Dr. Lisa AI</h3>
-                <span style="font-family: var(--font-mono); font-size: 12px; color: var(--text-dim);">Aug 2025 – Nov 2025</span>
-            </div>
-            <p style="font-size: 13px; margin-bottom: 8px; color: var(--text-dim);">Hybrid</p>
-            <p style="font-size: 13px; margin: 0;">Analyzed security risks across multiple tech stacks alongside the CTO, producing threat modeling reports to harden client LLM integrations. Validated AI input filters through self-directed research on Prompt Injection vulnerabilities, executing approved adversarial tests and documenting findings.</p>
-        </div>
-
-        <div class="card" style="margin-bottom: 12px;">
-            <div style="display: flex; justify-content: space-between; flex-wrap: wrap; gap: 4px;">
-                <h3>Cybersecurity Intern — Redynox</h3>
-                <span style="font-family: var(--font-mono); font-size: 12px; color: var(--text-dim);">Jul 2025 – Aug 2025</span>
-            </div>
-            <p style="font-size: 13px; margin-bottom: 8px; color: var(--text-dim);">Remote</p>
-            <p style="font-size: 13px; margin: 0;">Conducted web application penetration testing using ZAP and Wireshark, identifying critical vulnerabilities and delivering remediation reports. Hardened network systems by defining firewall policies and Least Privilege access controls across remote endpoints.</p>
-        </div>
-
-        <div class="card">
-            <div style="display: flex; justify-content: space-between; flex-wrap: wrap; gap: 4px;">
-                <h3>Branch Sales Associate — Grainger</h3>
-                <span style="font-family: var(--font-mono); font-size: 12px; color: var(--text-dim);">Apr 2024 – Present</span>
-            </div>
-            <p style="font-size: 13px; margin-bottom: 8px; color: var(--text-dim);">Tulsa, OK</p>
-            <p style="font-size: 13px; margin: 0;">Introduced processes to resolve persistent inventory bottlenecks, consistently clearing 100% of returned items each week.Maintained 98% inventory accuracy through routine stock audits while resolving complex technical and customer issues in a high-volume environment.</p>
-        </div>
-    </div>
-
-    <div style="margin-bottom: 40px;">
-        <h3 style="color: var(--accent); font-family: var(--font-mono); font-size: 12px; letter-spacing: 0.1em; text-transform: uppercase; margin-bottom: 16px;">Certifications</h3>
-        <div class="card">
-            <div style="display: flex; flex-direction: column; gap: 12px;">
-
-                <div style="display: flex; justify-content: space-between; align-items: center; flex-wrap: wrap; gap: 8px;">
-                    <h3 style="margin: 0;">Azure Fundamentals <span style="font-size: 12px; color: var(--text-dim);">AZ-900</span></h3>
-                    <span style="font-family: var(--font-mono); font-size: 12px; color: var(--text-dim);">May 2026</span>
-                </div>
-                <div style="border-top: 1px solid var(--border);"></div>
-
-                <div style="display: flex; justify-content: space-between; align-items: center; flex-wrap: wrap; gap: 8px;">
-                    <h3 style="margin: 0;">CompTIA CySA+ <span style="font-size: 12px; color: var(--text-dim);">CS0-003</span></h3>
-                    <span style="font-family: var(--font-mono); font-size: 12px; color: var(--text-dim);">Feb 2026</span>
-                </div>
-                <div style="border-top: 1px solid var(--border);"></div>
-
-                <div style="display: flex; justify-content: space-between; align-items: center; flex-wrap: wrap; gap: 8px;">
-                    <h3 style="margin: 0;">Blue Team Level 1 <span style="font-size: 12px; color: var(--text-dim);">BTL1</span></h3>
-                    <span style="font-family: var(--font-mono); font-size: 12px; color: var(--text-dim);">Nov 2025</span>
-                </div>
-                <div style="border-top: 1px solid var(--border);"></div>
-
-                <div style="display: flex; justify-content: space-between; align-items: center; flex-wrap: wrap; gap: 8px;">
-                    <h3 style="margin: 0;">Google Cybersecurity Professional Certificate</h3>
-                    <span style="font-family: var(--font-mono); font-size: 12px; color: var(--text-dim);">Sep 2025</span>
-                </div>
-                <div style="border-top: 1px solid var(--border);"></div>
-
-                <div style="display: flex; justify-content: space-between; align-items: center; flex-wrap: wrap; gap: 8px;">
-                    <h3 style="margin: 0;">CompTIA Network+ <span style="font-size: 12px; color: var(--text-dim);">N10-009</span></h3>
-                    <span style="font-family: var(--font-mono); font-size: 12px; color: var(--text-dim);">Jun 2025</span>
-                </div>
-                <div style="border-top: 1px solid var(--border);"></div>
-
-                <div style="display: flex; justify-content: space-between; align-items: center; flex-wrap: wrap; gap: 8px;">
-                    <h3 style="margin: 0;">CompTIA Security+ <span style="font-size: 12px; color: var(--text-dim);">SY0-701</span></h3>
-                    <span style="font-family: var(--font-mono); font-size: 12px; color: var(--text-dim);">May 2025</span>
+                <div class="card" style="margin-bottom: 12px;">
+                    <div style="display: flex; justify-content: space-between; flex-wrap: wrap; gap: 4px;">
+                        <h3>B.S. Cybersecurity — Northeastern State University</h3>
+                        <span style="font-family: var(--font-mono); font-size: 12px; color: var(--text-dim);">Expected May 2027</span>
+                    </div>
+                    <p style="font-size: 13px; margin-bottom: 8px;">Broken Arrow, OK &nbsp;·&nbsp; GPA: 4.0</p>
+                    <p style="font-size: 13px; margin: 0;">President of the Cybersecurity Club · Active member of the Google-Funded Cybersecurity Clinic.</p>
                 </div>
 
+                <div class="card">
+                    <div style="display: flex; justify-content: space-between; flex-wrap: wrap; gap: 4px;">
+                        <h3>A.S. Enterprise Development — Tulsa Community College</h3>
+                        <span style="font-family: var(--font-mono); font-size: 12px; color: var(--text-dim);">May 2024</span>
+                    </div>
+                    <p style="font-size: 13px; margin-bottom: 8px;">Tulsa, OK</p>
+                    <p style="font-size: 13px; margin: 0;">Academic Honors · Studied Computer Information Systems.</p>
+                </div>
             </div>
-        </div>
-    </div>
 
-    <div style="display: flex; gap: 12px; align-items: center; flex-wrap: wrap;">
-        <a href="assets/resume.pdf" class="btn-primary" target="_blank">Download Full Resume</a>
-        <div class="status">
-            <div class="status-dot"></div>
-            AZ-104 & AZ-500 in progress
-        </div>
-    </div>
+            <div style="margin-bottom: 40px;">
+                <h3 style="color: var(--accent); font-family: var(--font-mono); font-size: 12px; letter-spacing: 0.1em; text-transform: uppercase; margin-bottom: 16px;">Experience</h3>
 
-</section>
+                <div class="card" style="margin-bottom: 12px;">
+                    <div style="display: flex; justify-content: space-between; flex-wrap: wrap; gap: 4px;">
+                        <h3>AI Security Intern — Dr. Lisa AI</h3>
+                        <span style="font-family: var(--font-mono); font-size: 12px; color: var(--text-dim);">Aug 2025 – Nov 2025</span>
+                    </div>
+                    <p style="font-size: 13px; margin-bottom: 8px; color: var(--text-dim);">Hybrid</p>
+                    <p style="font-size: 13px; margin: 0;">Analyzed security risks across multiple tech stacks alongside the CTO, producing threat modeling reports to harden client LLM integrations. Validated AI input filters through self-directed research on Prompt Injection vulnerabilities, executing approved adversarial tests and documenting findings.</p>
+                </div>
+
+                <div class="card" style="margin-bottom: 12px;">
+                    <div style="display: flex; justify-content: space-between; flex-wrap: wrap; gap: 4px;">
+                        <h3>Cybersecurity Intern — Redynox</h3>
+                        <span style="font-family: var(--font-mono); font-size: 12px; color: var(--text-dim);">Jul 2025 – Aug 2025</span>
+                    </div>
+                    <p style="font-size: 13px; margin-bottom: 8px; color: var(--text-dim);">Remote</p>
+                    <p style="font-size: 13px; margin: 0;">Conducted web application penetration testing using ZAP and Wireshark, identifying critical vulnerabilities and delivering remediation reports. Hardened network systems by defining firewall policies and Least Privilege access controls across remote endpoints.</p>
+                </div>
+
+                <div class="card">
+                    <div style="display: flex; justify-content: space-between; flex-wrap: wrap; gap: 4px;">
+                        <h3>Branch Sales Associate — Grainger</h3>
+                        <span style="font-family: var(--font-mono); font-size: 12px; color: var(--text-dim);">Apr 2024 – Present</span>
+                    </div>
+                    <p style="font-size: 13px; margin-bottom: 8px; color: var(--text-dim);">Tulsa, OK</p>
+                    <p style="font-size: 13px; margin: 0;">Introduced processes to resolve persistent inventory bottlenecks, consistently clearing 100% of returned items each week. Maintained 98% inventory accuracy through routine stock audits while resolving complex technical and customer issues in a high-volume environment.</p>
+                </div>
+            </div>
+
+            <div style="margin-bottom: 40px;">
+                <h3 style="color: var(--accent); font-family: var(--font-mono); font-size: 12px; letter-spacing: 0.1em; text-transform: uppercase; margin-bottom: 16px;">Certifications</h3>
+                <div class="card">
+                    <div style="display: flex; flex-direction: column; gap: 12px;">
+
+                        <div style="display: flex; justify-content: space-between; align-items: center; flex-wrap: wrap; gap: 8px;">
+                            <h3 style="margin: 0;">Azure Fundamentals <span style="font-size: 12px; color: var(--text-dim);">AZ-900</span></h3>
+                            <span style="font-family: var(--font-mono); font-size: 12px; color: var(--text-dim);">May 2026</span>
+                        </div>
+                        <div style="border-top: 1px solid var(--border);"></div>
+
+                        <div style="display: flex; justify-content: space-between; align-items: center; flex-wrap: wrap; gap: 8px;">
+                            <h3 style="margin: 0;">CompTIA CySA+ <span style="font-size: 12px; color: var(--text-dim);">CS0-003</span></h3>
+                            <span style="font-family: var(--font-mono); font-size: 12px; color: var(--text-dim);">Feb 2026</span>
+                        </div>
+                        <div style="border-top: 1px solid var(--border);"></div>
+
+                        <div style="display: flex; justify-content: space-between; align-items: center; flex-wrap: wrap; gap: 8px;">
+                            <h3 style="margin: 0;">Blue Team Level 1 <span style="font-size: 12px; color: var(--text-dim);">BTL1</span></h3>
+                            <span style="font-family: var(--font-mono); font-size: 12px; color: var(--text-dim);">Nov 2025</span>
+                        </div>
+                        <div style="border-top: 1px solid var(--border);"></div>
+
+                        <div style="display: flex; justify-content: space-between; align-items: center; flex-wrap: wrap; gap: 8px;">
+                            <h3 style="margin: 0;">Google Cybersecurity Professional Certificate</h3>
+                            <span style="font-family: var(--font-mono); font-size: 12px; color: var(--text-dim);">Sep 2025</span>
+                        </div>
+                        <div style="border-top: 1px solid var(--border);"></div>
+
+                        <div style="display: flex; justify-content: space-between; align-items: center; flex-wrap: wrap; gap: 8px;">
+                            <h3 style="margin: 0;">CompTIA Network+ <span style="font-size: 12px; color: var(--text-dim);">N10-009</span></h3>
+                            <span style="font-family: var(--font-mono); font-size: 12px; color: var(--text-dim);">Jun 2025</span>
+                        </div>
+                        <div style="border-top: 1px solid var(--border);"></div>
+
+                        <div style="display: flex; justify-content: space-between; align-items: center; flex-wrap: wrap; gap: 8px;">
+                            <h3 style="margin: 0;">CompTIA Security+ <span style="font-size: 12px; color: var(--text-dim);">SY0-701</span></h3>
+                            <span style="font-family: var(--font-mono); font-size: 12px; color: var(--text-dim);">May 2025</span>
+                        </div>
+
+                    </div>
+                </div>
+            </div>
+
+            <div style="display: flex; gap: 12px; align-items: center; flex-wrap: wrap;">
+                <a href="assets/resume.pdf" class="btn-primary" target="_blank">Download Full Resume</a>
+                <div class="status">
+                    <div class="status-dot"></div>
+                    AZ-104 & AZ-500 in progress
+                </div>
+            </div>
+
+        </section>
+
         <!-- CONTACT -->
         <section id="contact">
             <div class="section-tag">// contact</div>
             <h2>Get In Touch</h2>
             <p style="max-width: 480px; font-size: 14px; margin-bottom: 32px;">
-                Whether it's an opportunity, a collaboration, or just to talk security — 
+                Whether it's an opportunity, a collaboration, or just to talk security —
                 my inbox is open.
             </p>
 
@@ -288,9 +292,9 @@
     <!-- =====================
          FOOTER
     ===================== -->
-    <footer style="border-top: 1px solid var(--border); margin-top: 80px; padding: 24px 0;">
+    <footer style="border-top: 1px solid var(--border); margin-top: 80px; padding: 24px 0; position: relative; z-index: 1;">
         <div class="container" style="display: flex; justify-content: space-between; align-items: center; flex-wrap: wrap; gap: 12px;">
-            <span style="font-family: var(--font-mono); font-size: 12px; color: var(--text-dim);">nikomassei.me</span>
+            <span style="font-family: var(--font-mono); font-size: 12px; color: var(--text-dim);">© 2026 Nicholas Massei</span>
             <span style="font-family: var(--font-mono); font-size: 12px; color: var(--text-dim);">built with HTML, CSS, JS — deployed on Azure</span>
         </div>
     </footer>
