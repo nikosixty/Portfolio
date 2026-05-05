@@ -40,6 +40,7 @@ body {
     font-size: 16px;
     line-height: 1.7;
     min-height: 100vh;
+    overflow-x: hidden;
 }
 
 a {
@@ -53,7 +54,67 @@ a:hover {
 }
 
 /* =====================
-   3. LAYOUT
+   3. BACKGROUND EFFECT
+   — Slow CSS grid + corner orbs
+   ===================== */
+
+/* Corner gradient orbs */
+body::before,
+body::after {
+    content: '';
+    position: fixed;
+    border-radius: 50%;
+    filter: blur(120px);
+    pointer-events: none;
+    z-index: 0;
+    animation: orbFloat 12s ease-in-out infinite alternate;
+}
+
+body::before {
+    width: 480px;
+    height: 480px;
+    top: -140px;
+    left: -140px;
+    background: radial-gradient(circle, rgba(88,166,255,0.07) 0%, transparent 70%);
+    animation-delay: 0s;
+}
+
+body::after {
+    width: 560px;
+    height: 560px;
+    bottom: -160px;
+    right: -160px;
+    background: radial-gradient(circle, rgba(63,185,80,0.05) 0%, transparent 70%);
+    animation-delay: -6s;
+}
+
+@keyframes orbFloat {
+    0%   { transform: translate(0, 0) scale(1); }
+    100% { transform: translate(30px, 30px) scale(1.08); }
+}
+
+/* Cyber grid overlay */
+.grid-bg {
+    position: fixed;
+    inset: 0;
+    z-index: 0;
+    pointer-events: none;
+    background-image:
+        linear-gradient(rgba(88,166,255,0.03) 1px, transparent 1px),
+        linear-gradient(90deg, rgba(88,166,255,0.03) 1px, transparent 1px);
+    background-size: 60px 60px;
+    mask-image: radial-gradient(ellipse 80% 80% at 50% 50%, black 40%, transparent 100%);
+    -webkit-mask-image: radial-gradient(ellipse 80% 80% at 50% 50%, black 40%, transparent 100%);
+}
+
+/* Make sure all content sits above background */
+nav, main, footer {
+    position: relative;
+    z-index: 1;
+}
+
+/* =====================
+   4. LAYOUT
    ===================== */
 .container {
     max-width: 1100px;
@@ -77,13 +138,15 @@ section.active {
 }
 
 /* =====================
-   4. NAVIGATION
+   5. NAVIGATION
    ===================== */
 nav {
     position: sticky;
     top: 0;
     z-index: 100;
-    background: var(--bg-primary);
+    background: rgba(13, 17, 23, 0.85);
+    backdrop-filter: blur(12px);
+    -webkit-backdrop-filter: blur(12px);
     border-bottom: 1px solid var(--border);
     padding: 24px 0;
 }
@@ -142,36 +205,37 @@ nav {
 }
 
 /* =====================
-   5. TYPOGRAPHY HELPERS
+   6. TYPOGRAPHY
+   — clamp(min, preferred, max)
    ===================== */
 .section-tag {
     font-family: var(--font-mono);
-    font-size: 11px;
+    font-size: clamp(11px, 1.2vw, 13px);
     color: var(--accent);
     letter-spacing: 0.12em;
     text-transform: uppercase;
-    margin-bottom: 12px;
+    margin-bottom: 16px;
 }
 
 h1 {
     font-family: var(--font-sans);
-    font-size: 52px;
+    font-size: clamp(38px, 6vw, 72px);
     font-weight: 500;
     color: var(--text-primary);
-    line-height: 1.15;
-    margin-bottom: 20px;
+    line-height: 1.1;
+    margin-bottom: 24px;
 }
 
 h2 {
     font-family: var(--font-sans);
-    font-size: 28px;
+    font-size: clamp(24px, 3.5vw, 38px);
     font-weight: 500;
     color: var(--text-primary);
-    margin-bottom: 24px;
+    margin-bottom: 28px;
 }
 
 h3 {
-    font-size: 15px;
+    font-size: clamp(14px, 1.5vw, 16px);
     font-weight: 500;
     color: var(--text-primary);
     margin-bottom: 4px;
@@ -182,17 +246,26 @@ p {
     margin-bottom: 16px;
 }
 
+/* Hero paragraph — bigger than normal body text */
+.hero-bio {
+    font-size: clamp(15px, 2vw, 19px);
+    line-height: 1.75;
+    color: var(--text-muted);
+    max-width: 600px;
+    margin-bottom: 32px;
+}
+
 /* =====================
-   6. BUTTONS
+   7. BUTTONS
    ===================== */
 .btn-primary {
     display: inline-block;
-    padding: 10px 22px;
+    padding: 12px 26px;
     background: var(--accent);
     color: #0d1117;
     border-radius: var(--radius);
     font-family: var(--font-mono);
-    font-size: 13px;
+    font-size: clamp(12px, 1.2vw, 14px);
     font-weight: 500;
     border: none;
     cursor: pointer;
@@ -206,12 +279,12 @@ p {
 
 .btn-ghost {
     display: inline-block;
-    padding: 10px 22px;
+    padding: 12px 26px;
     background: transparent;
     color: var(--text-muted);
     border-radius: var(--radius);
     font-family: var(--font-mono);
-    font-size: 13px;
+    font-size: clamp(12px, 1.2vw, 14px);
     border: 1px solid var(--border);
     cursor: pointer;
     transition: border-color var(--transition), color var(--transition);
@@ -223,7 +296,7 @@ p {
 }
 
 /* =====================
-   7. CARDS
+   8. CARDS
    ===================== */
 .card {
     background: var(--bg-card);
@@ -238,7 +311,8 @@ p {
 }
 
 /* =====================
-   8. TAGS / BADGES
+   9. TAGS / BADGES
+   — Full colorful system
    ===================== */
 .tag {
     display: inline-block;
@@ -252,14 +326,28 @@ p {
     margin: 4px 4px 0 0;
 }
 
-.tag-web      { border-color: #238636; color: #3fb950; background: #0d1f0d; }
-.tag-crypto   { border-color: #6e40c9; color: #a5a0f8; background: #1a1030; }
-.tag-forensics{ border-color: #da3633; color: #f78166; background: #2d0f0f; }
-.tag-cloud    { border-color: #1f6feb; color: #58a6ff; background: #0d1f38; }
-.tag-python   { border-color: #e3b341; color: #e3b341; background: #2d1f00; }
+/* Existing */
+.tag-web        { border-color: #238636; color: #3fb950; background: #0d1f0d; }
+.tag-crypto     { border-color: #6e40c9; color: #a5a0f8; background: #1a1030; }
+.tag-forensics  { border-color: #da3633; color: #f78166; background: #2d0f0f; }
+.tag-cloud      { border-color: #1f6feb; color: #58a6ff; background: #0d1f38; }
+.tag-python     { border-color: #e3b341; color: #e3b341; background: #2d1f00; }
+
+/* New — ready to use */
+.tag-soc        { border-color: #0bc5ea; color: #0bc5ea; background: #011f2b; }
+.tag-blueteam   { border-color: #4299e1; color: #63b3ed; background: #0a1929; }
+.tag-redteam    { border-color: #fc4f4f; color: #ff7b7b; background: #2d0a0a; }
+.tag-splunk     { border-color: #ff6b35; color: #ff8c5a; background: #2d1100; }
+.tag-linux      { border-color: #e2c869; color: #e2c869; background: #2a2000; }
+.tag-network    { border-color: #38b2ac; color: #4fd1c5; background: #041f1e; }
+.tag-malware    { border-color: #e53e3e; color: #fc8181; background: #2d0505; }
+.tag-osint      { border-color: #805ad5; color: #b794f4; background: #1a0f2e; }
+.tag-pentest    { border-color: #d53f8c; color: #f687b3; background: #2d0a1a; }
+.tag-ncl        { border-color: #1f6feb; color: #58a6ff; background: #0d1f38; }
+.tag-maltego    { border-color: #6e40c9; color: #a5a0f8; background: #1a1030; }
 
 /* =====================
-   9. STATUS INDICATOR
+   10. STATUS INDICATOR
    ===================== */
 .status {
     display: inline-flex;
@@ -284,7 +372,7 @@ p {
 }
 
 /* =====================
-   10. CURSOR BLINK
+   11. CURSOR BLINK
    ===================== */
 .cursor {
     display: inline-block;
@@ -302,10 +390,9 @@ p {
 }
 
 /* =====================
-   11. RESPONSIVE
+   12. RESPONSIVE
    ===================== */
 @media (max-width: 768px) {
-    h1 { font-size: 32px; }
     .nav-links {
         position: static;
         transform: none;
@@ -321,5 +408,8 @@ p {
     }
     .container {
         padding: 0 24px;
+    }
+    section {
+        padding: 64px 0;
     }
 }
