@@ -54,3 +54,26 @@ form.addEventListener('submit', async (e) => {
         status.textContent = '// something went wrong — try emailing directly';
     }
 });
+
+// =====================
+// CTF CARDS
+// =====================
+document.querySelectorAll('.ctf-header').forEach(header => {
+    header.addEventListener('click', () => {
+        const card = header.closest('.ctf-card');
+        const isOpen = card.classList.contains('open');
+        const toggle = header.querySelector('.ctf-toggle');
+
+        // Close all cards first
+        document.querySelectorAll('.ctf-card').forEach(c => {
+            c.classList.remove('open');
+            c.querySelector('.ctf-toggle').textContent = 'Read';
+        });
+
+        // Open clicked one if it was closed
+        if (!isOpen) {
+            card.classList.add('open');
+            toggle.textContent = 'Close';
+        }
+    });
+});

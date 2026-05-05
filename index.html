@@ -66,7 +66,7 @@
             <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 16px;">
 
                 <div class="card">
-                    <h3>Portfolio Website</h3>
+                    <h3>nikomassei.me - Portfolio</h3>
                     <p style="font-size: 13px; margin-bottom: 12px;">
                         Designed and built using HTML, CSS, and JavaScript.
                         Deployed via Azure Static Web Apps with a fully automated GitHub Actions CI/CD pipeline.
@@ -104,39 +104,115 @@
             </div>
         </section>
 
-        <!-- CTF -->
-        <section id="ctf">
-            <div class="section-tag">// ctf competitions</div>
-            <h2>Capture The Flags</h2>
-            <p style="max-width: 520px; font-size: 14px; margin-bottom: 32px;">
-                CTF Leader for the NSU Cybersecurity Club (NSU Cyberhawks), facilitating weekly training sessions on a range of security topics.
-            </p>
-            <div style="display: flex; flex-direction: column; gap: 12px;">
+<!-- CTF -->
+<section id="ctf">
+    <div class="section-tag">// ctf competitions</div>
+    <h2>Capture The Flags</h2>
+    <p style="max-width: 520px; font-size: 14px; margin-bottom: 32px;">
+        CTF Leader for the NSU Cybersecurity Club (NSU Cyberhawks), facilitating weekly training sessions on a range of security topics.
+    </p>
+    <div style="display: flex; flex-direction: column; gap: 12px;">
 
-                <div class="card" style="display: flex; justify-content: space-between; align-items: center; flex-wrap: wrap; gap: 12px;">
-                    <div>
-                        <h3>NCL Spring 2026 Team Game</h3>
-                        <p style="font-size: 12px; margin: 0;">April 2026</p>
-                    </div>
-                    <div style="display: flex; align-items: center; gap: 10px;">
-                        <span class="tag tag-ncl">NCL</span>
-                        <a href="#" class="btn-ghost" style="padding: 6px 14px; font-size: 12px;">Read</a>
-                    </div>
+        <!-- CTF ENTRY 1 -->
+        <div class="ctf-card card">
+            <div class="ctf-header">
+                <div>
+                    <h3>NCL Spring 2026 Team Game</h3>
+                    <p style="font-size: 12px; margin: 0;">April 2026</p>
                 </div>
-
-                <div class="card" style="display: flex; justify-content: space-between; align-items: center; flex-wrap: wrap; gap: 12px;">
-                    <div>
-                        <h3>Maltego CTF</h3>
-                        <p style="font-size: 12px; margin: 0;">February 2026</p>
-                    </div>
-                    <div style="display: flex; align-items: center; gap: 10px;">
-                        <span class="tag tag-osint">Maltego</span>
-                        <a href="#" class="btn-ghost" style="padding: 6px 14px; font-size: 12px;">Read</a>
-                    </div>
+                <div style="display: flex; align-items: center; gap: 10px;">
+                    <span class="tag tag-ncl">NCL</span>
+                    <button class="btn-ghost ctf-toggle" style="padding: 6px 14px; font-size: 12px;">Results</button>
                 </div>
-
             </div>
-        </section>
+            <div class="ctf-body">
+                <div class="ctf-body-inner">
+
+                    <div class="ctf-stats">
+                        <div class="ctf-stat">
+                            <span class="ctf-stat-value">Top 9%</span>
+                            <span class="ctf-stat-label">Team Placement</span>
+                        </div>
+                        <div class="ctf-stat">
+                            <span class="ctf-stat-value">5</span>
+                            <span class="ctf-stat-label">Team Members</span>
+                        </div>
+                        <div class="ctf-stat">
+                            <span class="ctf-stat-value">145</span>
+                            <span class="ctf-stat-label">Challenges Solved</span>
+                        </div>
+                    </div>
+
+                    <p style="font-size: 14px; margin-bottom: 20px;">
+                        The competition tested practical skills across nine domains: OSINT, Cryptography, Password Cracking, Log Analysis, Network Traffic Analysis, Forensics, Scanning & Reconnaissance, Web Application Exploitation, and Enumeration & Exploitation.
+
+                    </p>
+
+                    <div class="ctf-tags" style="margin-bottom: 24px;">
+                        <span class="tag tag-web">Web</span>
+                        <span class="tag tag-crypto">Cryptography</span>
+                        <span class="tag tag-forensics">Forensics</span>
+                        <span class="tag tag-linux">Log Analysis</span>
+                    </div>
+
+                    <!-- Added Screenshots -->
+                    <div class="ctf-images">
+                        <img src="assets/nclbadge.png" alt="NCL Badge" class="ctf-image">
+                        <img src="assets/nclplacement.png" alt="Top 9% Finish" class="ctf-image">
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- CTF ENTRY 2 -->
+        <div class="ctf-card card">
+            <div class="ctf-header">
+                <div>
+                    <h3>Maltego CTF</h3>
+                    <p style="font-size: 12px; margin: 0;">February 2026</p>
+                </div>
+                <div style="display: flex; align-items: center; gap: 10px;">
+                    <span class="tag tag-osint">Maltego</span>
+                    <button class="btn-ghost ctf-toggle" style="padding: 6px 14px; font-size: 12px;">Results</button>
+                </div>
+            </div>
+            <div class="ctf-body">
+                <div class="ctf-body-inner">
+
+                    <div class="ctf-stats">
+                        <div class="ctf-stat">
+                            <span class="ctf-stat-value">#78</span>
+                            <span class="ctf-stat-label">Finish</span>
+                        </div>
+                        <div class="ctf-stat">
+                            <span class="ctf-stat-value">215</span>
+                            <span class="ctf-stat-label">Points Scored</span>
+                        </div>
+                        <div class="ctf-stat">
+                            <span class="ctf-stat-value">OSINT</span>
+                            <span class="ctf-stat-label">Focus Area</span>
+                        </div>
+                    </div>
+
+                    <p style="font-size: 14px; margin-bottom: 20px;">
+                        Maltego's first official CTF (operating under the pseudonym 'amyyyyy'). This competition included a wide range of difficult OSINT challenges.
+                    </p>
+
+                    <div class="ctf-tags" style="margin-bottom: 24px;">
+                        <span class="tag tag-osint">OSINT</span>
+                        <span class="tag tag-network">Reconnaissance</span>
+                    </div>
+
+                    <div class="ctf-images">
+                        <img src="assets/maltegobadge.png" alt="Maltego Badge" class="ctf-image">
+                        <img src="assets/maltegopts.png" alt="Top 78 Finish" class="ctf-image">
+                    </div>
+                </div>
+            </div>
+        </div>
+
+    </div>
+</section>
 
         <!-- RESUME -->
         <section id="resume">
