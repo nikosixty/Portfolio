@@ -67,7 +67,7 @@ document.querySelectorAll('.ctf-header').forEach(header => {
         // Close all cards first
         document.querySelectorAll('.ctf-card').forEach(c => {
             c.classList.remove('open');
-            c.querySelector('.ctf-toggle').textContent = 'Read';
+            c.querySelector('.ctf-toggle').textContent = 'Results';
         });
 
         // Open clicked one if it was closed
