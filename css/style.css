@@ -256,6 +256,30 @@ p {
 }
 
 /* =====================
+   GRADIENT NAME
+   ===================== */
+.gradient-name {
+    background: linear-gradient(
+        135deg,
+        #58a6ff 0%,
+        #79c0ff 25%,
+        #a5d6ff 50%,
+        #58a6ff 75%,
+        #1f6feb 100%
+    );
+    background-size: 200% auto;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+    animation: gradientShift 4s linear infinite;
+}
+
+@keyframes gradientShift {
+    0%   { background-position: 0% center; }
+    100% { background-position: 200% center; }
+}
+
+/* =====================
    7. BUTTONS
    ===================== */
 .btn-primary {
