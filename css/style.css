@@ -319,6 +319,11 @@ p {
     color: var(--accent);
 }
 
+.btn-ghost.green:hover {
+    border-color: #5ce670;
+    color: #59df6d;
+}
+
 /* =====================
    8. CARDS
    ===================== */
@@ -551,13 +556,13 @@ p {
     gap: 7px;
     font-family: var(--font-mono);
     font-size: 12px;
-    color: var(--text-muted);
+    color: #3fb950;
     text-decoration: none;
     transition: color var(--transition);
 }
 
 .project-link:hover {
-    color: var(--accent);
+    color: #59df6d;
     opacity: 1;
 }
 
